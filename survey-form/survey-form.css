@@ -1,0 +1,24 @@
+html, body, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+.survey-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.survey-form {
+  width: 480px;
+  padding: 40px;
+  outline-offset: -20px;
+  outline: solid medium #99AAFF;
+  border: 1px solid gray;
+  background-color: #BBCCFF;
+}
+
+textarea {
+  width: 100%;
+}
