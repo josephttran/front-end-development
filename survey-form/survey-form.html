@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+</head>
+<body>
+  <form>
+    <div>
+      <label for="firstname">First Name: </label>
+      <input type="text" name="firstname" id="firstname" aria-labelledby="firstnamelabel" autofocus>      
+    </div>
+    <div>
+      <label for="lastname">Last Name: </label>
+      <input type="text" name="lastname" id="lastname" aria-labelledby="lastnamelabel">
+    </div>
+    <div>
+      <label for="placeholder">Placeholder: </label>
+      <input type="text" name="placeholder" id="placeholder" placeholder="just a place holder">
+    </div>
+    <div>
+      <label for="state">State: </label>
+      <select id="state">
+        <option value="ca">California</option>
+        <option value="ny">New York</option>>
+        <option value="tx">Texas</option>
+      </select>
+    </div>
+    <div>
+      <label for="gender">Gender: </label>
+      <input type="radio" id="male" name="gender">
+      <label for=male>Male</label>
+      <input type="radio" id="female" name="gender">
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender">
+      <label for="other">Other</label>
+    </div>
+    <div>
+      <label for="question-pc">Do you own a personal computer?</label>
+      <select id="question-pc">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+    <div>
+      <label for="question-beverage">What do you lile to drink?</label>
+      <input type="checkbox" id="water" name="water">
+      <label for="water">Water</label>
+      <input type="checkbox" id="orange" name="orange">
+      <label for="orange">Orange Juice</label>
+      <input type="checkbox" id="milk" name="milk">
+      <label for="milk">Milk</label>
+    </div>
+    <label for="comment">Comment: </label>
+    <div>
+      <textarea rows="4" cols="80" name="comment" id="comment">
+      </textarea>
+    </div>
+    <div>
+      <label for="date">Date: </label>
+      <input type="datetime-local" name="date" id="date" value="2020-04-01T01:00:00">
+    </div>
+    <div>
+      <button type="reset">Reset Form</button>
+      <button type="submit">Submit Survey</button>
+    </div>
+  </form>
+</body>
+</html>
