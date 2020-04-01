@@ -11,24 +11,30 @@
       <form class="survey-form">
         <fieldset>
           <legend>Personal Details</legend>
-          <div>
+          <div class="field">
             <label for="firstname">First Name: </label>
-            <input type="text" name="firstname" id="firstname" aria-labelledby="firstnamelabel" autofocus>
+            <input class="text-input" type="text" name="firstname" id="firstname" aria-labelledby="firstnamelabel" autofocus>
           </div>
-          <div>
+          <div class="field">
             <label for="lastname">Last Name: </label>
-            <input type="text" name="lastname" id="lastname" aria-labelledby="lastnamelabel">
+            <input class="text-input" type="text" name="lastname" id="lastname" aria-labelledby="lastnamelabel">
           </div>
-          <div>
+          <div class="field">
             <label for="gender">Gender: </label>
-            <input type="radio" id="male" name="gender">
-            <label for=male>Male</label>
-            <input type="radio" id="female" name="gender">
-            <label for="female">Female</label>
-            <input type="radio" id="other" name="gender">
-            <label for="other">Other</label>
+            <div>
+              <input type="radio" id="male" name="gender">
+              <label for=male>Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="gender">
+              <label for="female">Female</label>
+            </div>
+            <div>
+              <input type="radio" id="other" name="gender">
+              <label for="other">Other</label>
+            </div>
           </div>
-          <div>
+          <div class="field">
             <label for="state">State: </label>
             <select id="state">
               <option value="ca">California</option>
@@ -37,38 +43,44 @@
             </select>
           </div>
         </fieldset>
-        <fieldset>
+        <fieldset class="fieldset-questions">
           <legend>Questions</legend>
-          <div>
+          <div class="field">
             <label for="question-pc">Do you own a personal computer?</label>
             <select id="question-pc">
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
           </div>
-          <div>
-            <label for="question-beverage">What do you lile to drink?</label>
-            <input type="checkbox" id="water" name="water">
-            <label for="water">Water</label>
-            <input type="checkbox" id="orange" name="orange">
-            <label for="orange">Orange Juice</label>
-            <input type="checkbox" id="milk" name="milk">
-            <label for="milk">Milk</label>
+          <div class="field">
+            <label for="question-beverage">What do you like to drink?</label>
+            <div>
+              <input type="checkbox" id="water" name="water">
+              <label for="water">Water</label>  
+            </div>
+            <div>
+              <input type="checkbox" id="orange" name="orange">
+              <label for="orange">Orange Juice</label>
+            </div>
+            <div>
+              <input type="checkbox" id="milk" name="milk">
+              <label for="milk">Milk</label>
+            </div>
           </div>
         </fieldset>
-        <div>
+        <div class="field">
           <label for="comment">Comment: </label>
           <textarea rows="4" cols="80" name="comment" id="comment"></textarea>
         </div>
-        <div>
+        <div class="field">
           <label for="date">Date: </label>
           <input type="datetime-local" name="date" id="date" value="2020-04-01T01:00:00">
         </div>
-        <div>
+        <div class="field">
           <label for="placeholder">Placeholder: </label>
           <input type="text" name="placeholder" id="placeholder" placeholder="just a place holder">
         </div>
-        <div>
+        <div class="field">
           <button type="reset">Reset Form</button>
           <button type="submit">Submit Survey</button>
         </div>
