@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  border: 1px solid gray;
+}
+
+.previewer-header {
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+.image-previewer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-previewer img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
