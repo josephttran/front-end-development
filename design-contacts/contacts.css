@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  font-size: 16px;
+}
+
+::placeholder {
+  color: #424242;
+}
+
+input:focus {
+  outline-color:  #0074D9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem;
+  background-color: white;
+  width: 400px;
+  height: 640px;
+  border-radius: 10px;
+}
+
+.container > div {
+  margin: 0.25rem;
+}
+
+.contacts-header {
+  font-size: 2rem;
+}
+
+.contacts-search {
+  width: calc(100% - 1rem);
+}
+
+.contacts-search > input {
+  height: 1.75rem;
+  width: 100%;
+  background-color: #F2F4F6;
+  border: none;
+  font-size: 0.75rem;
+}
+
+.contact-item {
+  padding: 0.375rem 0.625rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+}
+
+.contact-item-status-offline {
+  background-color: gray;
+}
+
+.contact-item-status-online {
+  background-color: #00AD00;
+}
+
+.contact-item-name {
+  flex-grow: 1;
+  margin-left: 0.5rem;
+}
+
+.contact-item-company {
+  color:#595959;
+}
