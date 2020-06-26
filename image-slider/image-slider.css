@@ -1,0 +1,64 @@
+body {
+  margin: auto;
+  width: 75%;
+}
+
+.title {
+  text-align: center;
+}
+
+.slider {
+  padding: 0 24px;
+  height: 600px;
+  background-image: url("./images/fitness1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #d4d5d6;
+  display: flex;
+  align-items: center;
+}
+
+.slider-back {
+  height: 20px;
+  width: 20px;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  transform: rotate(45deg);
+}
+
+.slider-back:hover {
+  border-bottom: 2px solid gray;
+  border-left: 2px solid gray;
+}
+
+.slider-forward {
+  height: 20px;
+  width: 20px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  transform: rotate(-45deg);
+}
+
+.slider-forward:hover {
+  border-bottom: 2px solid gray;
+  border-right: 2px solid gray;
+}
+
+#slider-dot {
+  margin: 0 auto;
+  align-self: flex-end;
+}
+
+.dot {
+  margin: 5px;
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  border-radius: 50%;
+  border: 2px solid lightgray;
+  display: inline-block;
+}
+
+.dot:hover {
+  background-color: white;
+}
