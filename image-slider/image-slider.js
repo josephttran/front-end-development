@@ -1,3 +1,6 @@
+const dotActiveFill = '#fff';
+const dotNotActiveFill = '#000';
+
 const sliderImages = [
   "./images/fitness1.svg",
   "./images/fitness2.svg",
@@ -26,6 +29,7 @@ sliderBack.addEventListener('click', function() {
 });
 
 sliderForward.addEventListener('click', function() {
+
   const previousIndex = slideIndex;
 
   if (slideIndex === sliderImages.length - 1) {
@@ -38,18 +42,37 @@ sliderForward.addEventListener('click', function() {
   fillDot(previousIndex, slideIndex);
 });
 
+dots.forEach(dot => {
+  dot.addEventListener('click', function(event) {
+    let previousIndex;
+    slideIndex = parseInt(event.target.attributes.index.value);
+
+    // Style bg color stored as rbg(255, 255, 255) not #fff
+    dots.forEach((dot, index) => {
+      if (dot.style.backgroundColor === 'rgb(255, 255, 255)') {
+        previousIndex = index;
+      }
+    });
+
+    if (previousIndex !== slideIndex) {
+      displaySliderImage(slideIndex);
+      fillDot(previousIndex, slideIndex);
+    }
+  });
+});
+
 function displaySliderImage(slideIndex) {
   slider.style.backgroundImage = `url("${sliderImages[slideIndex]}")`;
 }
 
 function fillDot(previousIndex, currentIndex) {
-  dots[previousIndex].style.backgroundColor = '#000';
-  dots[currentIndex].style.backgroundColor = '#fff';
+  dots[previousIndex].style.backgroundColor = dotNotActiveFill;
+  dots[currentIndex].style.backgroundColor = dotActiveFill;
 }
 
 function displayInitialImageDot() {
   slider.style.backgroundImage = `url("${sliderImages[slideIndex]}")`;
-  dots[slideIndex].style.backgroundColor = '#fff';
+  dots[slideIndex].style.backgroundColor = dotActiveFill;
 }
 
 displayInitialImageDot();
