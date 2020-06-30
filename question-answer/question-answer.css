@@ -24,6 +24,10 @@ body {
   align-items: center;
 }
 
+.question:hover {
+  cursor: pointer;
+}
+
 .question-title {
   padding: 1rem 0;
   flex-grow: 1;
@@ -39,7 +43,14 @@ body {
   border: 1px solid #a45fb8;
   border-radius: 50%;
   font-size: 1.25rem;
+}
+
+.expand-symbol-active {
   transform: rotate(180deg);
+}
+
+.expand-symbol-not-active {
+  transform: rotate(0deg);
 }
 
 .answer {
