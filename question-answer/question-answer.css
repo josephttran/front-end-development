@@ -10,7 +10,7 @@ body {
 }
 
 .question-container {
-  width: 50%;
+  width: 96%;
   margin: auto;
   border: 1px solid #d4d5d6;
 }
@@ -37,6 +37,7 @@ body {
 .question-answer-expand-symbol {
   height: 1.5rem;
   width: 1.5rem;
+  padding: 0.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,4 +58,16 @@ body {
   padding-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+@media (min-width: 480px ) {
+  .question-container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .question-container {
+    width: 50%;
+  }
 }
