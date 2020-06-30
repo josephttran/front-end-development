@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.title {
+  text-align: center;
+}
+
+.question-container {
+  width: 50%;
+  margin: auto;
+  border: 1px solid #d4d5d6;
+}
+
+.border {
+  padding: 0 1rem;
+  border: 1px solid #d4d5d6;
+}
+.question {
+  display: flex;
+  align-items: center;
+}
+
+.question-title {
+  padding: 1rem 0;
+  flex-grow: 1;
+  font-size: 1.5rem;
+}
+
+.question-answer-expand-symbol {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #a45fb8;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  transform: rotate(180deg);
+}
+
+.answer {
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
