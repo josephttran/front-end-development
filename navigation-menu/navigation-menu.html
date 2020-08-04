@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Reponsive Navigation Menu</title>
+</head>
+<body>
+  <header>
+    <h1>
+      <a href="#">My Logo</a>
+    </h1>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Open the menu" aria-expanded="false">
+      <span aria-hidden="true">☰</span>
+    </button>
+    <nav id="menu" class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+    </section>
+    <section id="project">
+      <h2>My Projects</h2>
+    </section>
+    <section id="contact">
+      <h2>Contacts</h2>
+    </section>
+  </main>
+</body>
+</html>
