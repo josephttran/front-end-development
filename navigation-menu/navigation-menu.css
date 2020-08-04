@@ -4,6 +4,16 @@ html, body, ul {
   font-size: 10px;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
+h2 { 
+  margin: 0;
+  padding: 1.5rem;
+  font-size: 3rem;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -28,14 +38,53 @@ header {
   display: block;
 }
 
+.menu ul {
+  list-style: none;
+}
+
 .menu li {
-  padding: 0.5rem;
   background-color: #301281;
   font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
   text-align: center;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
+}
+
+@media (min-width: 480px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 2rem;
+  }
+
+  .menu {
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    background-color: #301281;
+  }
+
+  .menu ul{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu li {
+    padding-left: 2rem;
+  }
+
+  #about, #project, #contact {
+    height: 100vh;
+  }
+
+  main > section:nth-child(odd) {
+    background-color: #ddd;
+  }
 }
