@@ -4,15 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accessible Reponsive Navigation Menu</title>
+  <link rel="stylesheet" href="./navigation-menu.css">
+  <script src="./nagivation-menu.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>
-      <a href="#">My Logo</a>
-    </h1>
     <button id="menu-toggle" class="menu-toggle" aria-label="Open the menu" aria-expanded="false">
       <span aria-hidden="true">☰</span>
     </button>
+    <h1 class="logo">
+      <a href="#">My Logo</a>
+    </h1>
+  </header>
     <nav id="menu" class="menu">
       <ul>
         <li><a href="#">Home</a></li>
@@ -20,8 +23,7 @@
         <li><a href="#project">Project</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
-  </header>
+    </nav>  
   <main>
     <section id="about">
       <h2>About Me</h2>
