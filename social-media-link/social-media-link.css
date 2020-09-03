@@ -1,0 +1,45 @@
+body, ul, li, a {
+  margin: 0;
+  padding: 0;
+}
+
+.social-media-container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #012;
+  color: #fff;
+}
+
+.social-media-container li {
+  list-style: none;
+}
+  
+.social-media-item-container {
+  display: flex;
+  background-color: white;
+}
+
+.social-media-item a {
+  height: 4rem;
+  display: flex;
+  color: #012;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.social-media-item img {
+  height: 4rem;
+}
+
+.social-media-item span {
+  padding: 1rem;
+  align-self: center;
+  display: none;
+}
+
+.social-media-item:hover span {
+  display: inline-block;
+}
