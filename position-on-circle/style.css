@@ -40,6 +40,16 @@ body {
   background-color: rgb(0, 0, 0);
 }
 
+.line {
+  position: absolute;
+  height: 10px;
+  background-color: greenyellow;
+  width: 20px;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
 /* position on circumference*/
 .r {
   background-color: red;
