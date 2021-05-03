@@ -1,4 +1,3 @@
-// July 1, 2021
 const timeUntilLaunch = {
   days: 8,
   hours: 23,
@@ -19,11 +18,15 @@ let countdownTimer = {
   seconds: 0
 }
 
-const valueElements = document.querySelectorAll('.card .value');
-const dayElement = valueElements[0];
-const hourElement = valueElements[1];
-const minuteElement = valueElements[2];
-const secondElement = valueElements[3];
+const card = document.querySelectorAll('.card');
+const dayElement = card[0];
+const hourElement = card[1];
+const minuteElement = card[2];
+const secondElement = card[3];
+const dayValueElements = dayElement.querySelectorAll('.value');
+const hourValueElements = hourElement.querySelectorAll('.value');
+const minuteValueElements = minuteElement.querySelectorAll('.value');
+const secondValueElements = secondElement.querySelectorAll('.value');
 
 // Main
 const timerInterval = setInterval(function() {
@@ -77,9 +80,53 @@ function getDayHourMinuteSecond(milliseconds) {
 }
 
 function updateView({ days, hours, minutes, seconds }) {
-  dayElement.textContent = days < 10 ? `0${days}` : days;
-  hourElement.textContent = hours < 10 ? `0${hours}` : hours;
-  minuteElement.textContent = minutes < 10 ? `0${minutes}` : minutes;
-  secondElement.textContent = seconds < 10 ? `0${seconds}` : seconds;
+  const bottomCardSecond = secondElement.querySelector('.bottom');
+  const bottomCardMinute = minuteElement.querySelector('.bottom');
+  const bottomCardHour = hourElement.querySelector('.bottom');
+  const bottomCardDay = dayElement.querySelector('.bottom');
+  let isSecondAnimate = false;
+
+  if (!isSecondAnimate) {
+    bottomCardSecond.style.animation = 'flip 1s infinite';
+    isSecondAnimate = true;
+  }
+
+  if (seconds == 59) {
+    bottomCardMinute.style.animation = 'flip 1s';
+    setTimeout(() => {
+      bottomCardMinute.style.animation = 'none';
+    }, 1000);
+  }
+
+  if (minutes == 59) {
+    bottomCardHour.style.animation = 'flip 1s';
+    setTimeout(() => {
+      bottomCardHour.style.animation = 'none';
+    }, 1000);
+  }
+
+  if (hours == 23) {
+    bottomCardDay.style.animation = 'flip 1s';
+    setTimeout(() => {
+      bottomCardDay.style.animation = 'none';
+    }, 1000);
+  }
+
+  secondValueElements.forEach(node => {
+    node.textContent = seconds < 10 ? `0${seconds}` : seconds;
+  });
+  
+  minuteValueElements.forEach(node => {
+    node.textContent = minutes < 10 ? `0${minutes}` : minutes;
+  });
+  
+  hourValueElements.forEach(node => {
+    node.textContent = hours < 10 ? `0${hours}` : hours;
+  });
+
+  dayValueElements.forEach(node => {
+    node.textContent = days < 10 ? `0${days}` : days;
+  });
+
 }
 
